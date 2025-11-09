@@ -18,7 +18,7 @@ export default function ColorTooltip({ color, colorName, children }: ColorToolti
       const rect = containerRef.current.getBoundingClientRect();
       const windowHeight = window.innerHeight;
       
-      // Si está muy cerca del borde superior, mostrar abajo
+      // If it's very close to the top edge, show below
       if (rect.top < 80) {
         setPosition('bottom');
       } else {

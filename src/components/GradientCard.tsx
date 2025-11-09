@@ -60,12 +60,12 @@ export default function GradientCard({ gradient, onSelect }: GradientCardProps) 
         style={{ background: `linear-gradient(${gradient.direction || 'to right'}, ${gradient.colors.join(', ')})` }}
       />
       
-      {/* Overlay sutil solo en la parte superior (área del gradiente) */}
+      {/* Subtle overlay only on the top part (gradient area) */}
       <div className="absolute top-0 left-0 right-0 h-40 bg-black bg-opacity-0 group-hover:bg-opacity-8 transition-all duration-500 flex items-start justify-end p-3 rounded-t-xl overflow-hidden">
-        {/* Efecto holográfico solo en el gradiente */}
+        {/* Holographic effect only on the gradient */}
         <div className="absolute inset-0 opacity-0 group-hover:opacity-15 transition-opacity duration-500 pointer-events-none bg-gradient-to-br from-white/20 via-blue-100/10 to-purple-200/10 mix-blend-overlay rounded-t-xl"></div>
         
-        {/* Ondas curvas solo en el área del gradiente */}
+        {/* Curved waves only in the gradient area */}
         <div className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-700 pointer-events-none rounded-t-xl overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/15 to-transparent transform rotate-12 scale-110 translate-x-[-110%] translate-y-[-10%] group-hover:translate-x-[110%] group-hover:translate-y-[10%] transition-transform duration-1200 ease-out"
                style={{
