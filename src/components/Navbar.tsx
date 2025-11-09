@@ -1,6 +1,7 @@
 'use client'
 
-import { Search, Plus, Palette } from 'lucide-react';
+import { Search, Plus } from 'lucide-react';
+import Image from 'next/image';
 
 interface NavbarProps {
   searchTerm: string;
@@ -20,16 +21,22 @@ export default function Navbar({ searchTerm, onSearchChange, onCreateClick, onHo
             onClick={onHomeClick}
             className="flex items-center space-x-3 hover:opacity-80 transition-opacity duration-200 cursor-pointer"
           >
-            <div className="bg-white rounded-lg p-1">
-              <Palette className="h-8 w-8 text-blue-600" />
+            <div className="bg-white rounded-lg p-2 shadow-sm -mt-1">
+              <Image 
+                src="/logoNiceGradient.png" 
+                alt="Nice Gradient Logo" 
+                width={56} 
+                height={56}
+                className="rounded-md"
+              />
             </div>
             <div className="text-left">
-              <h1 className="text-2xl font-bold">
-                <span className="bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent">
+              <h1 className="text-2xl tracking-tight">
+                <span className="momo-trust-display-medium nice-gradient-text">
                   Nice Gradient
                 </span>
               </h1>
-              <p className="text-xs text-gray-500 hidden sm:block">Beautiful gradients collection</p>
+              <p className="text-xs text-gray-500 hidden sm:block font-light tracking-wide -mt-1">Beautiful gradients collection</p>
             </div>
           </button>
 
