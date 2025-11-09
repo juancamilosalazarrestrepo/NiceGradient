@@ -16,9 +16,8 @@ export default function Navbar({ searchTerm, onSearchChange, onCreateClick, show
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <div className="relative">
+            <div className="bg-white rounded-lg p-1">
               <Palette className="h-8 w-8 text-blue-600" />
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 opacity-20 rounded"></div>
             </div>
             <div>
               <h1 className="text-2xl font-bold">
@@ -36,7 +35,7 @@ export default function Navbar({ searchTerm, onSearchChange, onCreateClick, show
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
               <input
                 type="text"
-                placeholder="Buscar gradientes por nombre..."
+                placeholder="Search gradients by name..."
                 value={searchTerm}
                 onChange={(e) => onSearchChange(e.target.value)}
                 className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 bg-gray-50 focus:bg-white"
@@ -56,7 +55,7 @@ export default function Navbar({ searchTerm, onSearchChange, onCreateClick, show
             >
               <Plus className={`h-4 w-4 transition-transform duration-200 ${showMaker ? 'rotate-45' : ''}`} />
               <span className="hidden sm:inline">
-                {showMaker ? 'Cerrar' : 'Crear'}
+                {showMaker ? 'Close' : 'Create'}
               </span>
             </button>
           </div>

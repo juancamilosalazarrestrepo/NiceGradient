@@ -1,0 +1,23 @@
+<svg width="192" height="192" viewBox="0 0 192 192" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="appleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9333ea"/>
+      <stop offset="30%" style="stop-color:#ec4899"/>
+      <stop offset="70%" style="stop-color:#2563eb"/>
+      <stop offset="100%" style="stop-color:#06d6a0"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background with rounded corners for iOS -->
+  <rect width="192" height="192" rx="42" fill="url(#appleGradient)"/>
+  
+  <!-- Main palette shape -->
+  <path d="M96 48C69.49 48 48 69.49 48 96c0 12 2.64 23.44 7.44 33.68C62.22 142.04 76.8 146.16 89.12 140.8c6.88-3.52 15.44-3.52 22.32 0 6.88 3.52 14.8-1.2 17.68-8.48 2.88-7.28 10.8-12 18.56-10.8 7.76 1.2 14.88-5.44 16.08-13.44.16-1.04.24-2.08.24-3.08 0-22.08-17.92-40-40-40z" fill="white" opacity="0.95"/>
+  
+  <!-- Color dots representing the palette -->
+  <circle cx="72" cy="72" r="8" fill="#ec4899"/>
+  <circle cx="120" cy="72" r="8" fill="#2563eb"/>
+  <circle cx="72" cy="120" r="8" fill="#9333ea"/>
+  <circle cx="120" cy="120" r="8" fill="#06d6a0"/>
+  <circle cx="96" cy="96" r="10" fill="#ffffff" opacity="0.9"/>
+</svg>

@@ -15,9 +15,20 @@ export default function Home() {
 
   const allGradients = [...gradients, ...customGradients];
   
-  const filteredGradients = allGradients.filter(gradient =>
-    gradient.name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const filteredGradients = allGradients.filter(gradient => {
+    const searchLower = searchTerm.toLowerCase();
+    
+    // Search by name
+    if (gradient.name.toLowerCase().includes(searchLower)) return true;
+    
+    // Search by tags (color names)
+    if (gradient.tags?.some(tag => tag.toLowerCase().includes(searchLower))) return true;
+    
+    // Search by hex colors
+    if (gradient.colors.some(color => color.toLowerCase().includes(searchLower))) return true;
+    
+    return false;
+  });
 
   const handleGradientSelect = (gradient: Gradient) => {
     setSelectedGradient(gradient);
@@ -54,7 +65,7 @@ export default function Home() {
         )}
 
         {/* Gradients Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8 pt-4">
           {filteredGradients.map((gradient) => (
             <GradientCard
               key={gradient.id}
@@ -89,7 +100,7 @@ export default function Home() {
               Built with Next.js, TypeScript, and Tailwind CSS
             </p>
             <p className="text-gray-500 mt-2">
-              Explore beautiful gradients for your projects or create your own with the Gradient Maker
+              Explore beautiful gradients with poetic descriptions or create your own masterpiece
             </p>
           </div>
         </div>

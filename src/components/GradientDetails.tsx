@@ -1,7 +1,8 @@
 'use client'
 
 import { useState } from 'react';
-import { Gradient } from '@/data/gradients';
+import { Gradient, getColorName } from '@/data/gradients';
+import ColorTooltip from './ColorTooltip';
 
 interface GradientDetailsProps {
   gradient: Gradient | null;
@@ -52,11 +53,18 @@ export default function GradientDetails({ gradient, onClose }: GradientDetailsPr
       <div className="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-auto">
         {/* Header */}
         <div className="p-6 border-b border-gray-200">
-          <div className="flex justify-between items-center">
-            <h2 className="text-2xl font-bold text-gray-800">{gradient.name}</h2>
+          <div className="flex justify-between items-start">
+            <div className="flex-1 pr-4">
+              <h2 className="text-2xl font-bold text-gray-800 mb-3">{gradient.name}</h2>
+              {gradient.description && (
+                <blockquote className="text-sm font-light text-gray-600 italic leading-relaxed border-l-4 border-blue-200 pl-4 bg-blue-50 p-3 rounded-r-lg">
+                  "{gradient.description}"
+                </blockquote>
+              )}
+            </div>
             <button
               onClick={onClose}
-              className="text-gray-400 hover:text-gray-600 text-2xl"
+              className="text-gray-400 hover:text-gray-600 text-2xl ml-2"
             >
               ×
             </button>
@@ -70,6 +78,23 @@ export default function GradientDetails({ gradient, onClose }: GradientDetailsPr
             style={{ background: `linear-gradient(${gradient.direction || 'to right'}, ${gradient.colors.join(', ')})` }}
           />
 
+          {/* Tags */}
+          {gradient.tags && gradient.tags.length > 0 && (
+            <div className="mb-6">
+              <h3 className="text-lg font-semibold text-gray-800 mb-3">Color Tags</h3>
+              <div className="flex flex-wrap gap-2">
+                {gradient.tags.map((tag, index) => (
+                  <span
+                    key={index}
+                    className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full font-medium"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* Color Information */}
           <div className="mb-6">
             <h3 className="text-lg font-semibold text-gray-800 mb-3">Colors</h3>
@@ -79,11 +104,19 @@ export default function GradientDetails({ gradient, onClose }: GradientDetailsPr
                   key={index}
                   className="flex items-center space-x-2 p-2 border border-gray-200 rounded-md"
                 >
-                  <div
-                    className="w-8 h-8 rounded border border-gray-300"
-                    style={{ backgroundColor: color }}
-                  />
-                  <span className="text-sm font-mono text-gray-700">{color}</span>
+                  <ColorTooltip
+                    color={color}
+                    colorName={getColorName(color)}
+                  >
+                    <div
+                      className="w-8 h-8 rounded border border-gray-300 cursor-pointer hover:scale-110 transition-transform duration-200"
+                      style={{ backgroundColor: color }}
+                    />
+                  </ColorTooltip>
+                  <div>
+                    <span className="text-sm font-mono text-gray-700 block">{color}</span>
+                    <span className="text-xs text-gray-500 capitalize">{getColorName(color)}</span>
+                  </div>
                 </div>
               ))}
             </div>
