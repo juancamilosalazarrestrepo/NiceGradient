@@ -28,8 +28,8 @@ export default function ColorTooltip({ color, colorName, children }: ColorToolti
   }, [isVisible]);
 
   const tooltipClasses = position === 'top' 
-    ? "absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 z-50"
-    : "absolute top-full left-1/2 transform -translate-x-1/2 mt-2 z-50";
+    ? "absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 z-[9999]"
+    : "absolute top-full left-1/2 transform -translate-x-1/2 mt-2 z-[9999]";
 
   const arrowClasses = position === 'top'
     ? "absolute top-full left-1/2 transform -translate-x-1/2 border-4 border-transparent border-t-gray-900"
@@ -46,9 +46,18 @@ export default function ColorTooltip({ color, colorName, children }: ColorToolti
       
       {isVisible && (
         <div className={tooltipClasses}>
-          <div className="bg-gray-900 text-white text-xs rounded-lg px-3 py-2 whitespace-nowrap shadow-xl border border-gray-700">
-            <div className="font-medium">{colorName}</div>
-            <div className="font-mono text-gray-300">{color}</div>
+          <div className="bg-gray-900 text-white text-xs rounded-lg px-3 py-2 whitespace-nowrap shadow-2xl border border-gray-600 backdrop-blur-sm">
+            <div className="flex items-center gap-2">
+              {/* Color swatch */}
+              <div 
+                className="w-6 h-6 rounded-md border border-gray-600 shadow-inner flex-shrink-0"
+                style={{ backgroundColor: color }}
+              ></div>
+              <div>
+                <div className="font-semibold">{colorName}</div>
+                <div className="font-mono text-gray-300 text-[10px]">{color}</div>
+              </div>
+            </div>
             
             {/* Arrow */}
             <div className={arrowClasses}></div>

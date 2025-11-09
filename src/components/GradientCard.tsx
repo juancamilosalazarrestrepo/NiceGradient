@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react';
-import { Gradient, getColorName } from '@/data/gradients';
+import { Gradient, getColorName, getHexFromColorName } from '@/data/gradients';
 import ColorTooltip from './ColorTooltip';
 
 interface GradientCardProps {
@@ -14,6 +14,25 @@ export default function GradientCard({ gradient, onSelect }: GradientCardProps) 
 
   const handleClick = () => {
     onSelect(gradient);
+  };
+
+  // Function to determine if text should be white or black based on background color
+  const getTextColor = (hexColor: string): string => {
+    if (!hexColor) return 'text-gray-600';
+    
+    // Remove # if present
+    const hex = hexColor.replace('#', '');
+    
+    // Convert to RGB
+    const r = parseInt(hex.substr(0, 2), 16);
+    const g = parseInt(hex.substr(2, 2), 16);
+    const b = parseInt(hex.substr(4, 2), 16);
+    
+    // Calculate luminance
+    const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+    
+    // Return white text for dark backgrounds, black for light backgrounds
+    return luminance > 0.5 ? 'text-gray-800' : 'text-white';
   };
 
   const copyToClipboard = async (text: string) => {
@@ -37,12 +56,12 @@ export default function GradientCard({ gradient, onSelect }: GradientCardProps) 
       }}
     >
       <div
-        className="h-32 w-full rounded-t-xl overflow-hidden"
+        className="h-40 w-full rounded-t-xl overflow-hidden"
         style={{ background: `linear-gradient(${gradient.direction || 'to right'}, ${gradient.colors.join(', ')})` }}
       />
       
       {/* Overlay sutil solo en la parte superior (área del gradiente) */}
-      <div className="absolute top-0 left-0 right-0 h-32 bg-black bg-opacity-0 group-hover:bg-opacity-8 transition-all duration-500 flex items-start justify-end p-3 rounded-t-xl overflow-hidden">
+      <div className="absolute top-0 left-0 right-0 h-40 bg-black bg-opacity-0 group-hover:bg-opacity-8 transition-all duration-500 flex items-start justify-end p-3 rounded-t-xl overflow-hidden">
         {/* Efecto holográfico solo en el gradiente */}
         <div className="absolute inset-0 opacity-0 group-hover:opacity-15 transition-opacity duration-500 pointer-events-none bg-gradient-to-br from-white/20 via-blue-100/10 to-purple-200/10 mix-blend-overlay rounded-t-xl"></div>
         
@@ -74,27 +93,51 @@ export default function GradientCard({ gradient, onSelect }: GradientCardProps) 
         )}
       </div>
 
-      <div className="p-4 bg-white group-hover:bg-gray-50/50 transition-colors duration-300 relative z-10">
+      <div className="p-4 bg-white group-hover:bg-gray-50/50 transition-colors duration-300 relative z-10 rounded-b-xl">
         <h3 className="text-base font-semibold text-gray-800 mb-2 group-hover:text-gray-900">{gradient.name}</h3>
         
         {gradient.description && (
           <p className="text-xs font-light text-gray-600 group-hover:text-gray-700 leading-relaxed mb-3 italic min-h-[3rem] line-clamp-3 tracking-wide">
-            "{gradient.description}"
+            &ldquo;{gradient.description}&rdquo;
           </p>
         )}
         
         <div className="flex flex-wrap gap-1 pt-2 mb-2">
-          {gradient.tags && gradient.tags.slice(0, 3).map((tag, index) => (
-            <span
-              key={index}
-              className="px-1.5 py-0.5 bg-gray-100 text-gray-600 text-xs rounded-md font-medium"
-            >
-              {tag}
-            </span>
-          ))}
+          {gradient.tags && gradient.tags.slice(0, 3).map((tag, index) => {
+            const tagHex = getHexFromColorName(tag);
+            
+            // Create subtle version of the color with opacity and lighter tones
+            const getBgStyle = (hex: string) => {
+              if (!hex) return {};
+              
+              // Convert hex to RGB and create a subtle version
+              const r = parseInt(hex.substr(1, 2), 16);
+              const g = parseInt(hex.substr(3, 2), 16);
+              const b = parseInt(hex.substr(5, 2), 16);
+              
+              // Create a very subtle background with low opacity
+              return { 
+                backgroundColor: `rgba(${r}, ${g}, ${b}, 0.15)`,
+                borderColor: `rgba(${r}, ${g}, ${b}, 0.3)`
+              };
+            };
+            
+            const bgStyle = tagHex ? getBgStyle(tagHex) : {};
+            const textColor = tagHex ? 'text-gray-700' : 'text-gray-600';
+            
+            return (
+              <span
+                key={index}
+                className={`px-1.5 py-0.5 text-xs rounded-md font-medium border ${textColor} ${!tagHex ? 'bg-gray-100 border-gray-200' : ''}`}
+                style={bgStyle}
+              >
+                {tag}
+              </span>
+            );
+          })}
         </div>
         
-        <div className="flex space-x-1.5">
+        <div className="flex space-x-1.5 relative">
           {gradient.colors.map((color, index) => (
             <ColorTooltip
               key={index}

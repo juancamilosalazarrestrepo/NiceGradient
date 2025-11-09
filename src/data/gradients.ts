@@ -142,6 +142,19 @@ export const getColorName = (hexColor: string): string => {
   return hexColor; // Return hex if no mapping found
 };
 
+// Function to get hex color from color name (reverse lookup)
+export const getHexFromColorName = (colorName: string): string | null => {
+  const normalizedName = colorName.toLowerCase();
+  
+  for (const [hex, names] of Object.entries(colorMap)) {
+    if (names.some(name => name.toLowerCase() === normalizedName)) {
+      return hex;
+    }
+  }
+  
+  return null; // Return null if no hex found for the color name
+};
+
 export const gradients: Gradient[] = [
   {
     id: "1",

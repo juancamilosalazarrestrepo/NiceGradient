@@ -65,7 +65,7 @@ export default function Home() {
         )}
 
         {/* Gradients Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8 pt-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 pt-4 overflow-visible">
           {filteredGradients.map((gradient) => (
             <GradientCard
               key={gradient.id}
@@ -86,7 +86,7 @@ export default function Home() {
         {filteredGradients.length === 0 && searchTerm && (
           <div className="text-center py-12">
             <p className="text-gray-500 text-lg">
-              No gradients found matching "{searchTerm}"
+              No gradients found matching &ldquo;{searchTerm}&rdquo;
             </p>
           </div>
         )}
