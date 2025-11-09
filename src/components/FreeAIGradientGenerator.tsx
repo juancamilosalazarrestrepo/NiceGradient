@@ -283,7 +283,7 @@ Requirements:
             value={description}
             onChange={(e) => setDescription(e.target.value)}
             placeholder="Ej: Atardecer en la playa, aurora boreal mágica, energía cósmica, tranquilidad zen..."
-            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all duration-200"
+            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all duration-200 text-gray-900 placeholder-gray-400"
             rows={3}
             disabled={isGenerating}
           />

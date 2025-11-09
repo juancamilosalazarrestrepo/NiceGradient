@@ -159,7 +159,7 @@ export default function GradientDetails({ gradient, onClose }: GradientDetailsPr
                   <textarea
                     value={gradient.css}
                     readOnly
-                    className="w-full p-4 border border-gray-300 rounded-md bg-gray-50 font-mono text-sm h-32 resize-none"
+                    className="w-full p-4 border border-gray-300 rounded-md bg-gray-50 font-mono text-sm h-32 resize-none text-gray-900"
                   />
                   <button
                     onClick={() => copyToClipboard(gradient.css)}

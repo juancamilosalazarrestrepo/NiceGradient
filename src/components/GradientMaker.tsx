@@ -168,7 +168,7 @@ export default function GradientMaker({ onGradientCreate }: GradientMakerProps) 
                     type="text"
                     value={color}
                     onChange={(e) => updateColor(index, e.target.value)}
-                    className="flex-1 p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    className="flex-1 p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-900 placeholder-gray-400"
                     placeholder="#ffffff"
                   />
                   {colors.length > 2 && (
@@ -199,7 +199,7 @@ export default function GradientMaker({ onGradientCreate }: GradientMakerProps) 
             <textarea
               value={generateCSS()}
               readOnly
-              className="w-full p-3 border border-gray-300 rounded-md bg-gray-50 font-mono text-sm"
+              className="w-full p-3 border border-gray-300 rounded-md bg-gray-50 font-mono text-sm text-gray-900"
               rows={3}
             />
             <button
@@ -217,7 +217,7 @@ export default function GradientMaker({ onGradientCreate }: GradientMakerProps) 
               value={gradientName}
               onChange={(e) => setGradientName(e.target.value)}
               placeholder="Gradient name"
-              className="w-full p-2 mb-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              className="w-full p-2 mb-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-900 placeholder-gray-400"
             />
             
             {/* Description field */}
@@ -225,7 +225,7 @@ export default function GradientMaker({ onGradientCreate }: GradientMakerProps) 
               value={gradientDescription}
               onChange={(e) => setGradientDescription(e.target.value)}
               placeholder="Poetic description of the gradient (AI-generated or custom)"
-              className="w-full p-3 mb-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-vertical"
+              className="w-full p-3 mb-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-vertical text-gray-900 placeholder-gray-400"
               rows={3}
             />
             

@@ -315,7 +315,7 @@ Requirements:
               value={description}
               onChange={(e) => setDescription(e.target.value)}
               placeholder="E.g.: A beach sunset, northern lights, burning fire, deep ocean..."
-              className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200"
+              className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 text-gray-900 placeholder-gray-400"
               rows={3}
               disabled={isGenerating}
             />
