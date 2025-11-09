@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { Gradient } from '@/data/gradients';
 import GeminiGradientGenerator from './GeminiGradientGenerator';
 import AIGradientGenerator from './AIGradientGenerator';
-import { Palette, Sparkles, Zap, Crown } from 'lucide-react';
+import { Palette, Sparkles, Zap, Crown, Trash2 } from 'lucide-react';
 
 interface GradientMakerProps {
   onGradientCreate: (gradient: { name: string; colors: string[]; css: string }) => void;
@@ -176,7 +176,7 @@ export default function GradientMaker({ onGradientCreate }: GradientMakerProps) 
                       onClick={() => removeColor(index)}
                       className="px-3 py-2 text-red-600 hover:bg-red-50 rounded-md transition-colors"
                     >
-                      Remove
+                      <Trash2 className="h-4 w-4" />
                     </button>
                   )}
                 </div>

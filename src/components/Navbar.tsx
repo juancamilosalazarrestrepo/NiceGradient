@@ -6,20 +6,24 @@ interface NavbarProps {
   searchTerm: string;
   onSearchChange: (term: string) => void;
   onCreateClick: () => void;
+  onHomeClick: () => void;
   showMaker: boolean;
 }
 
-export default function Navbar({ searchTerm, onSearchChange, onCreateClick, showMaker }: NavbarProps) {
+export default function Navbar({ searchTerm, onSearchChange, onCreateClick, onHomeClick, showMaker }: NavbarProps) {
   return (
     <nav className="bg-white shadow-lg border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <div className="flex items-center space-x-3">
+          {/* Logo - Clickable to go home */}
+          <button 
+            onClick={onHomeClick}
+            className="flex items-center space-x-3 hover:opacity-80 transition-opacity duration-200 cursor-pointer"
+          >
             <div className="bg-white rounded-lg p-1">
               <Palette className="h-8 w-8 text-blue-600" />
             </div>
-            <div>
+            <div className="text-left">
               <h1 className="text-2xl font-bold">
                 <span className="bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent">
                   Nice Gradient
@@ -27,7 +31,7 @@ export default function Navbar({ searchTerm, onSearchChange, onCreateClick, show
               </h1>
               <p className="text-xs text-gray-500 hidden sm:block">Beautiful gradients collection</p>
             </div>
-          </div>
+          </button>
 
           {/* Search Bar */}
           <div className="flex-1 max-w-md mx-4">

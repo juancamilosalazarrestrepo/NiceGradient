@@ -45,6 +45,12 @@ export default function Home() {
     setCustomGradients([...customGradients, gradient]);
   };
 
+  const handleHomeClick = () => {
+    setSelectedGradient(null);
+    setShowMaker(false);
+    setSearchTerm('');
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Navigation */}
@@ -52,6 +58,7 @@ export default function Home() {
         searchTerm={searchTerm}
         onSearchChange={setSearchTerm}
         onCreateClick={() => setShowMaker(!showMaker)}
+        onHomeClick={handleHomeClick}
         showMaker={showMaker}
       />
 
@@ -99,7 +106,15 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="text-center">
             <p className="text-gray-600">
-              Built with Next.js, TypeScript, and Tailwind CSS
+              Developed by{' '}
+              <a 
+                href="https://www.salazarcode.com/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:text-blue-800 font-medium transition-colors duration-200"
+              >
+                Salazar Code
+              </a>
             </p>
             <p className="text-gray-500 mt-2">
               Explore beautiful gradients with poetic descriptions or create your own masterpiece
