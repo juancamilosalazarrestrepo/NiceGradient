@@ -157,6 +157,186 @@ export const getHexFromColorName = (colorName: string): string | null => {
 
 export const gradients: Gradient[] = [
   {
+    id: "NEW-001",
+    name: "Quantum Flux",
+    colors: ["#ff006e", "#8338ec", "#3a86ff", "#06ffa5"],
+    direction: "to right",
+    css: "background: linear-gradient(to right, #ff006e, #8338ec, #3a86ff, #06ffa5);",
+    description: "Reality bending through dimensions of electric magenta, cosmic purple, digital blue, and quantum mint.",
+    tags: ['magenta', 'hot pink', 'purple', 'violet', 'blue', 'electric blue', 'mint', 'cyan']
+  },
+  {
+    id: "NEW-002",
+    name: "Holographic Dreams",
+    colors: ["#b794f6", "#f093fb", "#4facfe", "#43e97b"],
+    direction: "to right",
+    css: "background: linear-gradient(to right, #b794f6, #f093fb, #4facfe, #43e97b);",
+    description: "Shimmering holographic visions dancing through lavender mist, magenta light, azure streams, and emerald glow.",
+    tags: ['lavender', 'purple', 'magenta', 'pink', 'blue', 'sky blue', 'green', 'emerald']
+  },
+  {
+    id: "NEW-003",
+    name: "Neon Genesis",
+    colors: ["#ff0080", "#ff8c00", "#00ff80", "#0080ff"],
+    direction: "to right",
+    css: "background: linear-gradient(to right, #ff0080, #ff8c00, #00ff80, #0080ff);",
+    description: "Genesis of electric life pulsing through hot pink energy, orange flame, lime lightning, and cyber blue.",
+    tags: ['hot pink', 'magenta', 'orange', 'tangerine', 'lime', 'bright green', 'blue', 'electric blue']
+  },
+  {
+    id: "NEW-004",
+    name: "Astral Projection",
+    colors: ["#667eea", "#764ba2", "#c471ed", "#f64f59"],
+    direction: "to right",
+    css: "background: linear-gradient(to right, #667eea, #764ba2, #c471ed, #f64f59);",
+    description: "Soul traveling through periwinkle galaxies, violet nebulae, amethyst dimensions, and coral starbursts.",
+    tags: ['periwinkle', 'blue', 'purple', 'violet', 'amethyst', 'magenta', 'coral', 'pink']
+  },
+  {
+    id: "NEW-005",
+    name: "Digital Euphoria",
+    colors: ["#00d4ff", "#5b86e5", "#36d1dc", "#b721ff"],
+    direction: "to right",
+    css: "background: linear-gradient(to right, #00d4ff, #5b86e5, #36d1dc, #b721ff);",
+    description: "Euphoric data streams flowing through cyan circuits, blue networks, turquoise signals, and purple code.",
+    tags: ['cyan', 'turquoise', 'blue', 'periwinkle', 'aqua', 'mint', 'purple', 'violet']
+  },
+  {
+    id: "NEW-006",
+    name: "Phoenix Rising",
+    colors: ["#ff4081", "#ff6ec7", "#c471f5", "#9c88ff"],
+    direction: "to right",
+    css: "background: linear-gradient(to right, #ff4081, #ff6ec7, #c471f5, #9c88ff);",
+    description: "Mythical phoenix ascending through rose fire, magenta flames, violet wings, and lavender smoke.",
+    tags: ['rose', 'pink', 'magenta', 'fuchsia', 'violet', 'purple', 'lavender', 'periwinkle']
+  },
+  {
+    id: "NEW-007",
+    name: "Cosmic Drift",
+    colors: ["#134e5e", "#71b280", "#fbc2eb", "#a6c1ee"],
+    direction: "to right",
+    css: "background: linear-gradient(to right, #134e5e, #71b280, #fbc2eb, #a6c1ee);",
+    description: "Drifting through dark teal voids, emerald moons, cotton candy clouds, and periwinkle infinity.",
+    tags: ['dark teal', 'navy', 'green', 'emerald', 'light pink', 'cotton candy', 'periwinkle', 'blue']
+  },
+  {
+    id: "NEW-008",
+    name: "Liquid Lightning",
+    colors: ["#667eea", "#764ba2", "#f093fb", "#43e97b"],
+    direction: "to right",
+    css: "background: linear-gradient(to right, #667eea, #764ba2, #f093fb, #43e97b);",
+    description: "Electric storms crystallizing into periwinkle bolts, purple thunder, magenta energy, and lime sparks.",
+    tags: ['periwinkle', 'blue', 'purple', 'violet', 'magenta', 'pink', 'lime', 'bright green']
+  },
+  {
+    id: "NEW-009",
+    name: "Velvet Cosmos",
+    colors: ["#2c1810", "#8b4513", "#daa520", "#ffd700"],
+    direction: "to right",
+    css: "background: linear-gradient(to right, #2c1810, #8b4513, #daa520, #ffd700);",
+    description: "Luxurious cosmic velvet transitioning from dark chocolate depths to golden starlight brilliance.",
+    tags: ['dark brown', 'chocolate', 'saddle brown', 'golden', 'amber', 'gold', 'yellow']
+  },
+  {
+    id: "NEW-010",
+    name: "Ethereal Pulse",
+    colors: ["#ffecd2", "#fcb69f", "#ff9a9e", "#fecfef"],
+    direction: "to right",
+    css: "background: linear-gradient(to right, #ffecd2, #fcb69f, #ff9a9e, #fecfef);",
+    description: "Gentle pulse of ethereal energy flowing through cream whispers, peach dreams, coral breath, and pink mist.",
+    tags: ['cream', 'ivory', 'peach', 'coral', 'pink', 'rose', 'light pink', 'blush']
+  },
+  {
+    id: "NEW-011",
+    name: "Cyber Storm",
+    colors: ["#0f0f23", "#ff006e", "#00f5ff", "#39ff14"],
+    direction: "to right",
+    css: "background: linear-gradient(to right, #0f0f23, #ff006e, #00f5ff, #39ff14);",
+    description: "Digital hurricane brewing from midnight code through magenta lightning, cyan rain, and neon green aftermath.",
+    tags: ['black', 'dark navy', 'magenta', 'hot pink', 'cyan', 'electric blue', 'neon green', 'lime']
+  },
+  {
+    id: "NEW-012",
+    name: "Aurora Borealis",
+    colors: ["#134e5e", "#71b280", "#a8e6a1", "#88d8c0"],
+    direction: "to right",
+    css: "background: linear-gradient(to right, #134e5e, #71b280, #a8e6a1, #88d8c0);",
+    description: "Northern lights painting the night sky from deep teal mystery through emerald dance to mint magic.",
+    tags: ['dark teal', 'navy', 'green', 'emerald', 'mint green', 'light green', 'seafoam', 'aqua']
+  },
+  {
+    id: "NEW-013",
+    name: "Galactic Core",
+    colors: ["#1a1a2e", "#16213e", "#e94560", "#f38ba8"],
+    direction: "to right",
+    css: "background: linear-gradient(to right, #1a1a2e, #16213e, #e94560, #f38ba8);",
+    description: "Journey to galactic center through dark matter veils, cosmic dust, stellar explosions, and pink nebulae.",
+    tags: ['dark navy', 'midnight', 'navy', 'dark blue', 'coral red', 'pink', 'rose', 'light pink']
+  },
+  {
+    id: "NEW-014",
+    name: "Prism Break",
+    colors: ["#ff0099", "#ffff00", "#00ff99", "#9900ff"],
+    direction: "to right",
+    css: "background: linear-gradient(to right, #ff0099, #ffff00, #00ff99, #9900ff);",
+    description: "Light shattering through crystal prisms, exploding into magenta fire, yellow lightning, mint energy, violet power.",
+    tags: ['magenta', 'hot pink', 'yellow', 'bright yellow', 'mint', 'bright green', 'purple', 'violet']
+  },
+  {
+    id: "NEW-015",
+    name: "Quantum Entanglement",
+    colors: ["#667eea", "#f093fb", "#53a0fd", "#c471ed"],
+    direction: "to right",
+    css: "background: linear-gradient(to right, #667eea, #f093fb, #53a0fd, #c471ed);",
+    description: "Quantum particles dancing in eternal connection across periwinkle space, magenta time, blue dimensions, violet reality.",
+    tags: ['periwinkle', 'blue', 'magenta', 'pink', 'sky blue', 'azure', 'violet', 'purple']
+  },
+  {
+    id: "NEW-016",
+    name: "Synthetic Sunset",
+    colors: ["#ff6b6b", "#4ecdc4", "#45b7d1", "#96ceb4"],
+    direction: "to right",
+    css: "background: linear-gradient(to right, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);",
+    description: "Artificial sunset programmed with coral warmth, turquoise coolness, azure depth, and mint freshness.",
+    tags: ['coral', 'salmon', 'turquoise', 'teal', 'sky blue', 'azure', 'mint green', 'seafoam']
+  },
+  {
+    id: "NEW-017",
+    name: "Dream Sequence",
+    colors: ["#fbc2eb", "#a6c1ee", "#c2e9fb", "#ffecd2"],
+    direction: "to right",
+    css: "background: linear-gradient(to right, #fbc2eb, #a6c1ee, #c2e9fb, #ffecd2);",
+    description: "Floating through dream layers of cotton candy thoughts, periwinkle memories, sky blue wishes, cream awakening.",
+    tags: ['light pink', 'cotton candy', 'periwinkle', 'lavender', 'light blue', 'sky blue', 'cream', 'ivory']
+  },
+  {
+    id: "NEW-018",
+    name: "Electric Forest",
+    colors: ["#134e5e", "#71b280", "#39ff14", "#00ff80"],
+    direction: "to right",
+    css: "background: linear-gradient(to right, #134e5e, #71b280, #39ff14, #00ff80);",
+    description: "Bioluminescent forest glowing from deep teal roots through emerald trunks to neon green energy, lime life.",
+    tags: ['dark teal', 'navy', 'green', 'emerald', 'neon green', 'lime', 'bright green', 'electric green']
+  },
+  {
+    id: "NEW-019",
+    name: "Metamorphosis",
+    colors: ["#8e2de2", "#4a00e0", "#c471ed", "#f64f59"],
+    direction: "to right",
+    css: "background: linear-gradient(to right, #8e2de2, #4a00e0, #c471ed, #f64f59);",
+    description: "Transformation unfolding through royal purple cocoon, deep violet change, amethyst emergence, coral rebirth.",
+    tags: ['purple', 'violet', 'royal purple', 'amethyst', 'magenta', 'coral', 'pink', 'salmon']
+  },
+  {
+    id: "NEW-020",
+    name: "Interstellar Journey",
+    colors: ["#0f0f23", "#667eea", "#f093fb", "#43e97b"],
+    direction: "to right",
+    css: "background: linear-gradient(to right, #0f0f23, #667eea, #f093fb, #43e97b);",
+    description: "Epic voyage through black space, periwinkle stargates, magenta wormholes, into emerald alien worlds.",
+    tags: ['black', 'dark navy', 'periwinkle', 'blue', 'magenta', 'pink', 'emerald', 'bright green']
+  },
+  {
     id: "1",
     name: "Mini",
     colors: ["#30e8bf", "#ff8235"],
