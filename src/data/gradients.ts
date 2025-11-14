@@ -166,6 +166,96 @@ export const gradients: Gradient[] = [
     tags: getColorTags(["#30e8bf", "#ff8235"])
   },
   {
+    id: "1.1",
+    name: "Stellar Bloom",
+    colors: ["#667eea", "#764ba2", "#f093fb"],
+    direction: "to right",
+    css: "background: linear-gradient(to right, #667eea, #764ba2, #f093fb);",
+    description: "Cosmic flowers blooming across galaxies, painting the universe in ethereal purple dreams.",
+    tags: getColorTags(["#667eea", "#764ba2"])
+  },
+  {
+    id: "1.2",
+    name: "Liquid Fire",
+    colors: ["#ff416c", "#ff4b2b"],
+    direction: "to right",
+    css: "background: linear-gradient(to right, #ff416c, #ff4b2b);",
+    description: "Molten passion flowing like liquid flames, igniting hearts with pure burning intensity.",
+    tags: ['coral', 'pink', 'red', 'orange red', 'flame']
+  },
+  {
+    id: "1.3",
+    name: "Arctic Dawn",
+    colors: ["#4facfe", "#00f2fe"],
+    direction: "to right",
+    css: "background: linear-gradient(to right, #4facfe, #00f2fe);",
+    description: "First light breaking over frozen landscapes, painting ice crystals in brilliant azure radiance.",
+    tags: ['blue', 'sky blue', 'cyan', 'turquoise', 'azure']
+  },
+  {
+    id: "1.4",
+    name: "Emerald Mist",
+    colors: ["#56ab2f", "#a8e6a1"],
+    direction: "to right",
+    css: "background: linear-gradient(to right, #56ab2f, #a8e6a1);",
+    description: "Morning fog lifting from emerald valleys, revealing hidden gardens of jade and mint.",
+    tags: ['green', 'emerald', 'forest green', 'mint green', 'light green']
+  },
+  {
+    id: "1.5",
+    name: "Royal Velvet",
+    colors: ["#8e2de2", "#4a00e0"],
+    direction: "to right",
+    css: "background: linear-gradient(to right, #8e2de2, #4a00e0);",
+    description: "Majestic purple tapestries woven with threads of deepest violet, fit for cosmic royalty.",
+    tags: ['purple', 'violet', 'amethyst', 'royal purple', 'magenta']
+  },
+  {
+    id: "1.6",
+    name: "Sunset Symphony",
+    colors: ["#fa709a", "#fee140"],
+    direction: "to right",
+    css: "background: linear-gradient(to right, #fa709a, #fee140);",
+    description: "Orchestra of colors playing the day's final song, from rose crescendo to golden finale.",
+    tags: ['pink', 'coral', 'yellow', 'golden yellow', 'sunset']
+  },
+  {
+    id: "1.7",
+    name: "Ocean Whisper",
+    colors: ["#a8edea", "#fed6e3"],
+    direction: "to right",
+    css: "background: linear-gradient(to right, #a8edea, #fed6e3);",
+    description: "Gentle waves carrying secrets from aquamarine depths to blushing coral shores.",
+    tags: getColorTags(["#a8edea", "#fed6e3"])
+  },
+  {
+    id: "1.8",
+    name: "Neon Tokyo",
+    colors: ["#f093fb", "#f5576c", "#4facfe"],
+    direction: "to right",
+    css: "background: linear-gradient(to right, #f093fb, #f5576c, #4facfe);",
+    description: "Electric nights in cyberpunk streets, where magenta neon bleeds into coral and electric blue.",
+    tags: ['magenta', 'pink', 'coral', 'blue', 'electric blue', 'neon']
+  },
+  {
+    id: "1.9",
+    name: "Golden Nebula",
+    colors: ["#ffecd2", "#fcb69f"],
+    direction: "to right",
+    css: "background: linear-gradient(to right, #ffecd2, #fcb69f);",
+    description: "Stardust clouds of cream and peach swirling in cosmic ballet, birth of golden stars.",
+    tags: ['cream', 'ivory', 'peach', 'coral', 'golden', 'warm']
+  },
+  {
+    id: "1.10",
+    name: "Midnight Garden",
+    colors: ["#2c3e50", "#3498db", "#9b59b6"],
+    direction: "to right",
+    css: "background: linear-gradient(to right, #2c3e50, #3498db, #9b59b6);",
+    description: "Secret garden blooming under starlight, where shadow flowers open to reveal azure and amethyst.",
+    tags: ['charcoal', 'dark gray', 'blue', 'azure', 'purple', 'amethyst']
+  },
+  {
     id: "2",
     name: "Grade Grey",
     colors: ["#bdc3c7", "#2c3e50"],
@@ -441,7 +531,8 @@ export const gradients: Gradient[] = [
     colors: ["#1e3c72", "#2a5298"],
     direction: "to right",
     css: "background: linear-gradient(to right, #1e3c72, #2a5298);",
-    description: "Regal midnight blue ascending to noble sapphire heights, commanding respect and admiration."
+    description: "Regal midnight blue ascending to noble sapphire heights, commanding respect and admiration.",
+    tags: getColorTags(["#1e3c72", "#2a5298"])
   },
   {
     id: "33",
@@ -550,5 +641,95 @@ export const gradients: Gradient[] = [
     css: "background: linear-gradient(to right, #b24592, #f15f79);",
     description: "Rich plum emotions blooming into warm coral feelings, the gentle art of falling in love.",
     tags: getColorTags(["#b24592", "#f15f79"])
+  },
+  {
+    id: "45",
+    name: "Aurora Dreams",
+    colors: ["#667eea", "#764ba2", "#f093fb"],
+    direction: "to right",
+    css: "background: linear-gradient(to right, #667eea, #764ba2, #f093fb);",
+    description: "Northern lights dancing through violet skies, painting ethereal dreams across the cosmic canvas.",
+    tags: getColorTags(["#667eea", "#764ba2"])
+  },
+  {
+    id: "46",
+    name: "Mystic Forest",
+    colors: ["#134e5e", "#71b280"],
+    direction: "to right",
+    css: "background: linear-gradient(to right, #134e5e, #71b280);",
+    description: "Ancient emerald woods where shadows whisper secrets to the gentle morning light.",
+    tags: ['dark teal', 'navy', 'green', 'emerald', 'forest green']
+  },
+  {
+    id: "47",
+    name: "Sunset Mirage",
+    colors: ["#ff6b6b", "#feca57", "#48dbfb"],
+    direction: "to right",
+    css: "background: linear-gradient(to right, #ff6b6b, #feca57, #48dbfb);",
+    description: "Desert sunset illusions melting into golden heat waves before dissolving into cool oasis blues.",
+    tags: ['coral', 'red', 'golden yellow', 'amber', 'cyan', 'turquoise']
+  },
+  {
+    id: "48",
+    name: "Crystal Cave",
+    colors: ["#a8e6cf", "#dcedc1", "#ffd3a5"],
+    direction: "to right",
+    css: "background: linear-gradient(to right, #a8e6cf, #dcedc1, #ffd3a5);",
+    description: "Luminous jade crystals reflecting pale mint light into warm amber depths of underground wonder.",
+    tags: ['mint green', 'seafoam', 'pale green', 'cream', 'peach', 'amber']
+  },
+  {
+    id: "49",
+    name: "Velvet Night",
+    colors: ["#0c0c0c", "#654ea3", "#e0c3fc"],
+    direction: "to right",
+    css: "background: linear-gradient(to right, #0c0c0c, #654ea3, #e0c3fc);",
+    description: "Midnight's embrace awakening into royal purple dreams, crowned with soft lavender moonbeams.",
+    tags: ['black', 'charcoal', 'purple', 'royal purple', 'lavender', 'light purple']
+  },
+  {
+    id: "50",
+    name: "Golden Hour",
+    colors: ["#f7971e", "#ffd200", "#ffb347"],
+    direction: "to right",
+    css: "background: linear-gradient(to right, #f7971e, #ffd200, #ffb347);",
+    description: "Perfect moment when amber sunlight transforms into liquid gold, painting everything in warm honey.",
+    tags: ['orange', 'amber', 'golden yellow', 'gold', 'peach', 'warm']
+  },
+  {
+    id: "51",
+    name: "Ocean Depth",
+    colors: ["#1e3c72", "#2a5298", "#74b9ff"],
+    direction: "to right",
+    css: "background: linear-gradient(to right, #1e3c72, #2a5298, #74b9ff);",
+    description: "Diving through navy trenches into sapphire waters, discovering light in the deepest blues.",
+    tags: getColorTags(["#1e3c72", "#2a5298"])
+  },
+  {
+    id: "52",
+    name: "Cherry Blossom",
+    colors: ["#ff9a9e", "#fecfef", "#fecfef"],
+    direction: "to right",
+    css: "background: linear-gradient(to right, #ff9a9e, #fecfef, #fecfef);",
+    description: "Delicate pink petals floating on spring breeze, capturing the ephemeral beauty of blooming seasons.",
+    tags: getColorTags(["#ff9a9e", "#fecfef"])
+  },
+  {
+    id: "53",
+    name: "Electric Storm", 
+    colors: ["#667eea", "#764ba2", "#f093fb"],
+    direction: "to right",
+    css: "background: linear-gradient(to right, #667eea, #764ba2, #f093fb);",
+    description: "Lightning crackling through violet storm clouds, unleashing pure electric energy into the night.",
+    tags: getColorTags(["#667eea", "#764ba2"])
+  },
+  {
+    id: "54",
+    name: "Desert Rose",
+    colors: ["#ff8a80", "#ffcc02", "#40e0d0"],
+    direction: "to right",
+    css: "background: linear-gradient(to right, #ff8a80, #ffcc02, #40e0d0);",
+    description: "Rare coral blooms in golden sand dunes, discovering hidden turquoise oases of impossible beauty.",
+    tags: ['coral', 'salmon', 'golden yellow', 'gold', 'turquoise', 'cyan']
   }
 ];
